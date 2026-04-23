@@ -26,7 +26,7 @@ export const MODES: Mode[] = [
     glyph: 'x²',
     outerScale: squareScale,
     innerScale: logScale,
-    innerRotatable: false,
+    innerRotatable: true,
   },
   {
     id: 'cube',
@@ -34,7 +34,7 @@ export const MODES: Mode[] = [
     glyph: 'x³',
     outerScale: cubeScale,
     innerScale: logScale,
-    innerRotatable: false,
+    innerRotatable: true,
   },
   {
     id: 'sin',
@@ -42,7 +42,7 @@ export const MODES: Mode[] = [
     glyph: 'sin',
     outerScale: logScale,
     innerScale: sineScale,
-    innerRotatable: false,
+    innerRotatable: true,
   },
   {
     id: 'tan',
@@ -50,7 +50,7 @@ export const MODES: Mode[] = [
     glyph: 'tan',
     outerScale: logScale,
     innerScale: tangentScale,
-    innerRotatable: false,
+    innerRotatable: true,
   },
 ];
 
