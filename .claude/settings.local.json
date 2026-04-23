@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(shopt -s dotglob)",
+      "Bash(mv compass-calc/* compass-calc/.* .)",
+      "Bash(rmdir compass-calc *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -sS http://localhost:5173/src/App.tsx -o /dev/null -w \"%{http_code}\\\\n\")"
+    ]
+  }
+}

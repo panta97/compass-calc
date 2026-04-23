@@ -1,0 +1,187 @@
+.compass-wrapper {
+  position: relative;
+  width: min(94vmin, 620px);
+  aspect-ratio: 1;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.65));
+}
+
+.compass-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -8%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(255, 180, 90, 0.18),
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.compass-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+/* Drop shadow halo */
+.compass-shadow {
+  fill: rgba(0, 0, 0, 0.45);
+  filter: blur(6px);
+}
+
+/* Bezel details */
+.bezel-outer-hi {
+  fill: none;
+  stroke: rgba(255, 220, 150, 0.35);
+  stroke-width: 0.8;
+}
+
+.bezel-inner-edge {
+  fill: none;
+  stroke: rgba(40, 22, 8, 0.9);
+  stroke-width: 1.4;
+}
+
+.bezel-inner-well {
+  fill: #1a0f05;
+  stroke: rgba(60, 34, 14, 1);
+  stroke-width: 0.6;
+}
+
+/* Rivets */
+.rivet {
+  fill: #3c2410;
+  stroke: #1a0d03;
+  stroke-width: 0.5;
+}
+
+.rivet-hi {
+  fill: rgba(255, 220, 150, 0.55);
+}
+
+/* Cardinal decorations */
+.fleur {
+  fill: #efc074;
+  stroke: #3b2310;
+  stroke-width: 0.4;
+}
+
+.cardinal-mark {
+  fill: #efc074;
+  stroke: #3b2310;
+  stroke-width: 0.4;
+}
+
+/* Parchment scale faces */
+.face-parchment-outer {
+  fill: url(#parchment-outer);
+  stroke: rgba(60, 34, 14, 0.55);
+  stroke-width: 0.6;
+}
+
+.face-parchment-inner {
+  fill: url(#parchment-inner);
+  stroke: rgba(60, 34, 14, 0.65);
+  stroke-width: 0.6;
+}
+
+/* Tick marks */
+.tick-mark {
+  stroke: var(--ink);
+  fill: none;
+}
+
+.tick-label {
+  font-family: 'IM Fell English SC', 'IM Fell English', Georgia, serif;
+  fill: var(--ink);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  paint-order: stroke;
+  stroke: rgba(232, 211, 165, 0.55);
+  stroke-width: 0.4;
+}
+
+/* Boundary line between scales */
+.reading-boundary {
+  fill: none;
+  stroke: rgba(60, 34, 14, 0.45);
+  stroke-width: 0.5;
+}
+
+/* Center medallion */
+.medallion-bg {
+  fill: url(#medallion-grad);
+  stroke: rgba(40, 22, 8, 0.8);
+  stroke-width: 1;
+}
+
+.medallion-bg-inner {
+  fill: #1c1007;
+  stroke: rgba(197, 149, 68, 0.3);
+  stroke-width: 0.5;
+}
+
+.compass-rose {
+  fill: rgba(232, 211, 165, 0.1);
+  stroke: rgba(197, 149, 68, 0.6);
+  stroke-width: 0.6;
+  stroke-linejoin: round;
+}
+
+.rose-spike-major {
+  fill: #e8c27a;
+  stroke: #3b2310;
+  stroke-width: 0.4;
+}
+
+.rose-spike-minor {
+  fill: #b68940;
+  stroke: #3b2310;
+  stroke-width: 0.4;
+}
+
+.medallion-hub {
+  fill: #c59544;
+  stroke: #3b2310;
+  stroke-width: 0.6;
+}
+
+.medallion-hub-inner {
+  fill: #3b2310;
+}
+
+.medallion-label {
+  font-family: 'IM Fell English SC', Georgia, serif;
+  fill: rgba(232, 211, 165, 0.55);
+  letter-spacing: 0.12em;
+}
+
+/* Cursor hairline */
+.cursor-knob {
+  fill: url(#brass-rim);
+  stroke: #2a1608;
+  stroke-width: 0.6;
+}
+
+.cursor-knob-inner {
+  fill: #2a1608;
+}
+
+.cursor-hairline {
+  stroke: #c11e10;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+}
+
+.cursor-hairline-glow {
+  stroke: rgba(255, 120, 60, 0.6);
+  stroke-width: 4;
+  stroke-linecap: round;
+  filter: url(#candle-glow);
+  opacity: 0.7;
+}

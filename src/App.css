@@ -1,0 +1,51 @@
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(0.75rem, 2vw, 2rem);
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.app-header {
+  text-align: center;
+  padding-top: 0.25rem;
+}
+
+.app-title {
+  font-family: 'IM Fell English SC', 'Cinzel', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  letter-spacing: 0.12em;
+  margin: 0;
+  color: var(--brass-light);
+  text-shadow:
+    0 0 14px rgba(255, 180, 90, 0.25),
+    0 2px 0 #1a0f05;
+}
+
+.app-subtitle {
+  margin: 0.35rem 0 0;
+  font-style: italic;
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  color: rgba(232, 211, 165, 0.62);
+  letter-spacing: 0.02em;
+}
+
+.app-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  align-items: center;
+  justify-items: center;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 960px) {
+  .app-main {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+    align-items: center;
+  }
+}
