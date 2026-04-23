@@ -19,15 +19,15 @@
   margin: 0;
   color: var(--brass-light);
   text-shadow:
-    0 0 14px rgba(255, 180, 90, 0.25),
-    0 2px 0 #1a0f05;
+    0 0 14px rgba(243, 236, 216, 0.22),
+    0 2px 0 #14161a;
 }
 
 .app-subtitle {
   margin: 0.35rem 0 0;
   font-style: italic;
   font-size: clamp(0.85rem, 1.6vw, 1rem);
-  color: rgba(232, 211, 165, 0.62);
+  color: rgba(242, 235, 216, 0.62);
   letter-spacing: 0.02em;
 }
 

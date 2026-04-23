@@ -8,8 +8,8 @@
 
 .mode-chip {
   appearance: none;
-  background: linear-gradient(180deg, #2a1a0c, #16100a);
-  border: 1px solid rgba(197, 149, 68, 0.3);
+  background: linear-gradient(180deg, #242830, #181b21);
+  border: 1px solid rgba(242, 235, 216, 0.28);
   border-radius: 4px;
   color: var(--brass-light);
   font-family: 'Cinzel', serif;
@@ -22,14 +22,14 @@
 }
 
 .mode-chip:hover {
-  border-color: rgba(245, 212, 134, 0.55);
+  border-color: rgba(250, 245, 232, 0.55);
 }
 
 .mode-chip.is-active {
   border-color: var(--brass-light);
   box-shadow:
-    inset 0 0 0 1px rgba(245, 212, 134, 0.4),
-    0 0 14px rgba(255, 180, 90, 0.22);
+    inset 0 0 0 1px rgba(250, 245, 232, 0.4),
+    0 0 14px rgba(243, 236, 216, 0.18);
 }
 
 .mode-chip:active {

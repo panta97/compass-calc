@@ -60,30 +60,30 @@ export function Compass({
       >
         <defs>
           <radialGradient id="brass-grad" cx="50%" cy="35%" r="70%">
-            <stop offset="0%" stopColor="#f5d486" />
-            <stop offset="45%" stopColor="#c59544" />
-            <stop offset="80%" stopColor="#7a4e1c" />
-            <stop offset="100%" stopColor="#3a2410" />
+            <stop offset="0%" stopColor="#fcf8ec" />
+            <stop offset="45%" stopColor="#dcd4bf" />
+            <stop offset="80%" stopColor="#7a7368" />
+            <stop offset="100%" stopColor="#2a2a24" />
           </radialGradient>
           <radialGradient id="brass-rim" cx="50%" cy="40%" r="60%">
-            <stop offset="0%" stopColor="#ffe9b0" />
-            <stop offset="50%" stopColor="#b87d36" />
-            <stop offset="100%" stopColor="#2d1a08" />
+            <stop offset="0%" stopColor="#fdfaf0" />
+            <stop offset="50%" stopColor="#c4bca8" />
+            <stop offset="100%" stopColor="#1f2024" />
           </radialGradient>
           <radialGradient id="parchment-outer" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#ecd6a8" />
-            <stop offset="80%" stopColor="#c9a66a" />
-            <stop offset="100%" stopColor="#876330" />
+            <stop offset="0%" stopColor="#f2ebd8" />
+            <stop offset="80%" stopColor="#d4cdb8" />
+            <stop offset="100%" stopColor="#756e5f" />
           </radialGradient>
           <radialGradient id="parchment-inner" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#e8d3a5" />
-            <stop offset="80%" stopColor="#c19e60" />
-            <stop offset="100%" stopColor="#7a5a2b" />
+            <stop offset="0%" stopColor="#efe9d4" />
+            <stop offset="80%" stopColor="#d0c9b4" />
+            <stop offset="100%" stopColor="#6d675a" />
           </radialGradient>
           <radialGradient id="medallion-grad" cx="50%" cy="50%" r="55%">
-            <stop offset="0%" stopColor="#eac47a" />
-            <stop offset="70%" stopColor="#a06d2c" />
-            <stop offset="100%" stopColor="#3a2410" />
+            <stop offset="0%" stopColor="#ece5d0" />
+            <stop offset="70%" stopColor="#958e80" />
+            <stop offset="100%" stopColor="#2a2a24" />
           </radialGradient>
           <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="2" />
