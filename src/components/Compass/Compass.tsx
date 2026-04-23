@@ -13,6 +13,7 @@ interface CompassProps {
   innerRotation: number;
   cursorRotation: number;
   operationLabel?: string;
+  innerRotatable?: boolean;
   onInnerRotationChange: (deg: number) => void;
   onCursorRotationChange: (deg: number) => void;
 }
@@ -36,6 +37,7 @@ export function Compass({
   innerRotation,
   cursorRotation,
   operationLabel = '',
+  innerRotatable = true,
   onInnerRotationChange,
   onCursorRotationChange,
 }: CompassProps) {
@@ -131,11 +133,11 @@ export function Compass({
           faceClassName="face-parchment-inner"
           tickClassName="tick-mark"
           labelClassName="tick-label"
-          interactive
-          onPointerDown={innerDrag.onPointerDown}
-          onPointerMove={innerDrag.onPointerMove}
-          onPointerUp={innerDrag.onPointerUp}
-          onPointerCancel={innerDrag.onPointerCancel}
+          interactive={innerRotatable}
+          onPointerDown={innerRotatable ? innerDrag.onPointerDown : undefined}
+          onPointerMove={innerRotatable ? innerDrag.onPointerMove : undefined}
+          onPointerUp={innerRotatable ? innerDrag.onPointerUp : undefined}
+          onPointerCancel={innerRotatable ? innerDrag.onPointerCancel : undefined}
         />
 
         {/* Reading boundary line */}
