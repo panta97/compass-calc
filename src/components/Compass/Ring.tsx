@@ -121,17 +121,24 @@ export function Ring({
           .filter((t) => t.label)
           .map((tick, i) => {
             const angle = tick.position * 360;
-            const { x, y } = polarToCartesian(0, 0, labelRadius, angle);
+            const isMajor = tick.kind === 'major';
+            // Mid labels sit slightly deeper than integer labels
+            const r = isMajor ? labelRadius : labelRadius - direction * 4;
+            const size = isMajor ? labelSize : labelSize * 0.62;
+            const { x, y } = polarToCartesian(0, 0, r, angle);
+            const cls = isMajor
+              ? labelClassName
+              : `${labelClassName ?? ''} tick-label-sub`.trim();
             return (
               <text
                 key={`${scale.id}-lbl-${i}`}
                 x={x}
                 y={y}
-                fontSize={labelSize}
+                fontSize={size}
                 textAnchor="middle"
                 dominantBaseline="central"
                 transform={`rotate(${angle} ${x} ${y})`}
-                className={labelClassName}
+                className={cls}
               >
                 {tick.label}
               </text>

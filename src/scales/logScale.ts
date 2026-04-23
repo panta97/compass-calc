@@ -13,9 +13,9 @@ function buildLogTicks(): TickSpec[] {
   };
 
   const classify = (v: number): TickKind => {
-    const rounded = Math.round(v * 1000) / 1000;
-    if (Number.isInteger(rounded)) return 'major';
-    if (Number.isInteger(Math.round(rounded * 10) / 10)) return 'mid';
+    const hundredths = Math.round(v * 100);
+    if (hundredths % 100 === 0) return 'major';   // integer
+    if (hundredths % 10 === 0) return 'mid';      // exact tenth
     return 'minor';
   };
 
@@ -38,10 +38,23 @@ function buildLogTicks(): TickSpec[] {
     push(r, classify(r));
   }
 
-  // Labels for major integer ticks 1..9 (10 coincides with 1 around the circle)
+  // Labels: integer majors (1..9) get a full numeral.
+  // Mid ticks get a trailing-digit label in the regions where there's
+  // room — tenths between 1 and 2, halves between 2 and 5.
   for (const tick of out) {
-    if (tick.kind === 'major' && tick.value >= 1 && tick.value <= 9) {
-      tick.label = String(Math.round(tick.value));
+    const v = tick.value;
+    if (tick.kind === 'major' && v >= 1 && v <= 9) {
+      tick.label = String(Math.round(v));
+      continue;
+    }
+    if (tick.kind === 'mid') {
+      if (v > 1 && v < 2) {
+        // 1.1 → "1", 1.2 → "2", ..., 1.9 → "9"
+        tick.label = String(Math.round((v - 1) * 10));
+      } else if (v > 2 && v < 5 && Math.abs(v - Math.round(v) - 0.5) < 1e-6) {
+        // 2.5, 3.5, 4.5 → "5"
+        tick.label = '5';
+      }
     }
   }
 

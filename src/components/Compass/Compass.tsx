@@ -12,7 +12,7 @@ interface CompassProps {
   innerScale: Scale;
   innerRotation: number;
   cursorRotation: number;
-  operationLabel: string;
+  operationLabel?: string;
   onInnerRotationChange: (deg: number) => void;
   onCursorRotationChange: (deg: number) => void;
 }
@@ -35,7 +35,7 @@ export function Compass({
   innerScale,
   innerRotation,
   cursorRotation,
-  operationLabel,
+  operationLabel = '',
   onInnerRotationChange,
   onCursorRotationChange,
 }: CompassProps) {
@@ -109,7 +109,7 @@ export function Compass({
           tickLen={{ major: 20, mid: 13, minor: 8 }}
           direction={1}
           labelRadius={OUTER_FACE_OUTER - 12}
-          labelSize={12}
+          labelSize={16}
           faceInner={OUTER_FACE_INNER}
           faceOuter={OUTER_FACE_OUTER}
           faceClassName="face-parchment-outer"
@@ -125,7 +125,7 @@ export function Compass({
           tickLen={{ major: 20, mid: 13, minor: 8 }}
           direction={-1}
           labelRadius={INNER_FACE_INNER + 12}
-          labelSize={12}
+          labelSize={16}
           faceInner={INNER_FACE_INNER}
           faceOuter={INNER_FACE_OUTER}
           faceClassName="face-parchment-inner"

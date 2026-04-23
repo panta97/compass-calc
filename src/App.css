@@ -33,19 +33,8 @@
 
 .app-main {
   flex: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(1rem, 2.5vw, 2.5rem);
+  display: flex;
   align-items: center;
-  justify-items: center;
-  max-width: 1400px;
+  justify-content: center;
   width: 100%;
-  margin: 0 auto;
-}
-
-@media (min-width: 960px) {
-  .app-main {
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-    align-items: center;
-  }
 }
